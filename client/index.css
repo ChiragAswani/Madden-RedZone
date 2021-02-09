@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+}
+#application-container {
+    padding: 20px 50px;
+    background-image: url("./background.jpg");
+    height: 100vh;
+    overflow: auto;
+}
+.application-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.application-logo img{
+    width: 30%;
+    min-width: 200px;
+}
+.application-streams {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.twitch-container {
+    width: 48%;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.twitch-spacing {
+    width: 2%;
+}
+.twitch-user {
+    background: black;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+.twitch-user:hover {
+    cursor: pointer;
+}
+.twitch-row {
+    width: 100%;
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+}
+@media only screen and (max-width: 1100px) {
+    .twitch-row {
+        flex-direction: column;
+    }
+    .twitch-container {
+        width: 100%;
+    }
+}

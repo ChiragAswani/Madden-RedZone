@@ -1,0 +1,22 @@
+{
+  "name": "madden-redzone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChiragAswani/Personal-Website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChiragAswani/Personal-Website/issues"
+  },
+  "homepage": "https://github.com/ChiragAswani/Personal-Website#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="./favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app"/>
+    <link rel="stylesheet" href="./index.css">
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+    <title>Madden RedZone</title>
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $( function() {
+            $( "#sortable" ).sortable();
+        } );
+    </script>
+
+
+</head>
+<body>
+    <div id="application-container">
+        <div class="application-logo">
+            <img src="./logo.png" alt="logo" />
+        </div>
+        <div class="application-streams" >
+            <div class="twitch-row" id="sortable">
+                <div class="twitch-container" >
+                    <div class="twitch-user">junniboy01</div>
+                    <div id="arjun-twitch"></div>
+                </div>
+                <div class="twitch-container">
+                    <div class="twitch-user">dyl_dog123</div>
+                    <div id="dylan-twitch"></div>
+                </div>
+                <div class="twitch-container">
+                    <div class="twitch-user">chig32</div>
+                    <div id="chirag-twitch"></div>
+                </div>
+                <div class="twitch-container">
+                    <div class="twitch-user">nicknguyen24</div>
+                    <div id="nick-twitch"></div>
+                </div>
+                <div class="twitch-container">
+                    <div class="twitch-user">siddyk86</div>
+                    <div id="sid-twitch"></div>
+                </div>
+                <div class="twitch-container">
+                    <div class="twitch-user">hoostrash69</div>
+                    <div id="ajay-twitch"></div>
+                </div>
+                <div class="twitch-container">
+                    <div class="twitch-user">hoorules69</div>
+                    <div id="eric-twitch"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript">
+        const arjun = new Twitch.Embed("arjun-twitch", {
+            width: '100%',
+            height: 360,
+            channel: "junniboy01",
+            layout: "video",
+            muted: true
+        });
+        const dylan = new Twitch.Embed("dylan-twitch", {
+            width: '100%',
+            height: 360,
+            channel: "dyl_dog123",
+            layout: "video",
+            muted: true
+        });
+
+        const chirag = new Twitch.Embed("chirag-twitch", {
+            width: '100%',
+            height: 360,
+            channel: "chig32",
+            layout: "video",
+            muted: true
+        });
+        const nick = new Twitch.Embed("nick-twitch", {
+            width: '100%',
+            height: 360,
+            channel: "nicknguyen24",
+            layout: "video",
+            muted: true
+        });
+        const sid = new Twitch.Embed("sid-twitch", {
+            width: '100%',
+            height: 360,
+            channel: "siddyk86",
+            layout: "video",
+            muted: true
+        });
+        const ajay = new Twitch.Embed("ajay-twitch", {
+            width: '100%',
+            height: 360,
+            channel: "hoostrash69",
+            layout: "video",
+            muted: true
+        });
+        const eric = new Twitch.Embed("eric-twitch", {
+            width: '100%',
+            height: 360,
+            channel: "hoorules69",
+            layout: "video",
+            muted: true
+        });
+    </script>
+
+</body>
+</html>
