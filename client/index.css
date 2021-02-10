@@ -36,8 +36,15 @@ body {
     color: white;
     text-align: center;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 28px;
     font-family: 'Trebuchet MS', sans-serif;
+    position: relative;
+}
+.drag-to-reoder {
+    font-size: 30px;
+    position:absolute;
+    top:0;
+    right:0;
 }
 .twitch-user:hover {
     cursor: pointer;

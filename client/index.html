@@ -7,6 +7,7 @@
     <meta name="theme-color" content="#000000" />
     <meta name="description" content="Web site created using create-react-app"/>
     <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     <script src="https://embed.twitch.tv/embed/v1.js"></script>
     <title>Madden RedZone</title>
 
@@ -29,31 +30,31 @@
         <div class="application-streams" >
             <div class="twitch-row" id="sortable">
                 <div class="twitch-container" >
-                    <div class="twitch-user">junniboy01</div>
+                    <div class="twitch-user">junniboy01<div class="drag-to-reoder"><i class="fas fa-arrows-alt"></i></div></div>
                     <div id="arjun-twitch"></div>
                 </div>
                 <div class="twitch-container">
-                    <div class="twitch-user">dyl_dog123</div>
+                    <div class="twitch-user">dylp123<div class="drag-to-reoder"><i class="fas fa-arrows-alt"></i></div></div>
                     <div id="dylan-twitch"></div>
                 </div>
                 <div class="twitch-container">
-                    <div class="twitch-user">chig32</div>
+                    <div class="twitch-user">chig32<div class="drag-to-reoder"><i class="fas fa-arrows-alt"></i></div></div>
                     <div id="chirag-twitch"></div>
                 </div>
                 <div class="twitch-container">
-                    <div class="twitch-user">nicknguyen24</div>
+                    <div class="twitch-user">nicknguyen24<div class="drag-to-reoder"><i class="fas fa-arrows-alt"></i></div></div>
                     <div id="nick-twitch"></div>
                 </div>
                 <div class="twitch-container">
-                    <div class="twitch-user">siddyk86</div>
+                    <div class="twitch-user">siddyk86<div class="drag-to-reoder"><i class="fas fa-arrows-alt"></i></div></div>
                     <div id="sid-twitch"></div>
                 </div>
                 <div class="twitch-container">
-                    <div class="twitch-user">hoostrash69</div>
+                    <div class="twitch-user">hoostrash69<div class="drag-to-reoder"><i class="fas fa-arrows-alt"></i></div></div>
                     <div id="ajay-twitch"></div>
                 </div>
                 <div class="twitch-container">
-                    <div class="twitch-user">hoorules69</div>
+                    <div class="twitch-user">hoorules69<div class="drag-to-reoder"><i class="fas fa-arrows-alt"></i></div></div>
                     <div id="eric-twitch"></div>
                 </div>
             </div>
@@ -72,7 +73,7 @@
         const dylan = new Twitch.Embed("dylan-twitch", {
             width: '100%',
             height: 360,
-            channel: "dyl_dog123",
+            channel: "dylp123",
             layout: "video",
             muted: true
         });
