@@ -14,18 +14,16 @@
     <script data-ad-client="ca-pub-4424826598376439" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script>
-        $( function() {
-            $( "#sortable" ).sortable();
-        } );
-    </script>
-
-
 </head>
 <body>
     <div id="application-container">
         <div class="application-logo">
             <img src="./logo.png" alt="logo" />
+            <select id="display">
+                <option value="180">Small</option>
+                <option value="360" selected="selected">Medium</option>
+                <option value="720">Large</option>
+            </select>
         </div>
         <div class="application-streams" >
             <div class="twitch-row" id="sortable">
@@ -63,55 +61,71 @@
     </div>
 
     <script type="text/javascript">
-        const arjun = new Twitch.Embed("arjun-twitch", {
-            width: '100%',
-            height: 360,
-            channel: "junniboy01",
-            layout: "video",
-            muted: true
-        });
-        const dylan = new Twitch.Embed("dylan-twitch", {
-            width: '100%',
-            height: 360,
-            channel: "dylp123",
-            layout: "video",
-            muted: true
-        });
+        $( function() {
+            $( "#sortable" ).sortable();
+        } );
+        function embedTwitch(height) {
+            new Twitch.Embed("arjun-twitch", {
+                width: '100%',
+                height: height,
+                channel: "junniboy01",
+                layout: "video",
+                muted: true
+            });
+            new Twitch.Embed("dylan-twitch", {
+                width: '100%',
+                height: height,
+                channel: "dylp123",
+                layout: "video",
+                muted: true
+            });
 
-        const chirag = new Twitch.Embed("chirag-twitch", {
-            width: '100%',
-            height: 360,
-            channel: "chig32",
-            layout: "video",
-            muted: true
-        });
-        const nick = new Twitch.Embed("nick-twitch", {
-            width: '100%',
-            height: 360,
-            channel: "nicknguyen24",
-            layout: "video",
-            muted: true
-        });
-        const sid = new Twitch.Embed("sid-twitch", {
-            width: '100%',
-            height: 360,
-            channel: "siddyk86",
-            layout: "video",
-            muted: true
-        });
-        const ajay = new Twitch.Embed("ajay-twitch", {
-            width: '100%',
-            height: 360,
-            channel: "hoostrash69",
-            layout: "video",
-            muted: true
-        });
-        const eric = new Twitch.Embed("eric-twitch", {
-            width: '100%',
-            height: 360,
-            channel: "hoorules69",
-            layout: "video",
-            muted: true
+            new Twitch.Embed("chirag-twitch", {
+                width: '100%',
+                height: height,
+                channel: "chig32",
+                layout: "video",
+                muted: true
+            });
+            new Twitch.Embed("nick-twitch", {
+                width: '100%',
+                height: height,
+                channel: "nicknguyen24",
+                layout: "video",
+                muted: true
+            });
+            new Twitch.Embed("sid-twitch", {
+                width: '100%',
+                height: height,
+                channel: "siddyk86",
+                layout: "video",
+                muted: true
+            });
+            new Twitch.Embed("ajay-twitch", {
+                width: '100%',
+                height: height,
+                channel: "hoostrash69",
+                layout: "video",
+                muted: true
+            });
+            new Twitch.Embed("eric-twitch", {
+                width: '100%',
+                height: height,
+                channel: "hoorules69",
+                layout: "video",
+                muted: true
+            });
+        }
+        embedTwitch(360);
+        $( "#display" ).change(function() {
+            $("#arjun-twitch").html("");
+            $("#dylan-twitch").html("");
+            $("#chirag-twitch").html("");
+            $("#nick-twitch").html("");
+            $("#sid-twitch").html("");
+            $("#ajay-twitch").html("");
+            $("#eric-twitch").html("");
+            embedTwitch(this.value);
         });
     </script>
 

@@ -11,10 +11,23 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 .application-logo img{
     width: 30%;
     min-width: 200px;
+    margin-bottom: 10px;
+}
+.application-logo select{
+
+    margin-bottom: 10px;
+    width: 200px;
+    text-align-last:center;
+    border-radius: 10px;
+    height: 25px;
+}
+select:focus {
+    outline: none;
 }
 .application-streams {
     display: flex;
