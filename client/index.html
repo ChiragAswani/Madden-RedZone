@@ -61,9 +61,22 @@
     </div>
 
     <script type="text/javascript">
+        var moved = {}
         $( function() {
             $( "#sortable" ).sortable();
         } );
+        function autoSort(name) {
+            if (moved[name]) return true
+            const items = document.getElementsByClassName('twitch-container')
+            for (let i in items) {
+                if (items[i] && items[i].innerHTML && items[i].innerHTML.includes(name)) {
+                    const parent = items[i].parentNode;
+                    const detatchedItem = parent.removeChild(items[i]);
+                    parent.insertBefore(detatchedItem, items[0]);
+                    moved[name] = true
+                }
+            }
+        }
         function embedTwitch(height) {
             new Twitch.Embed("arjun-twitch", {
                 width: '100%',
@@ -78,14 +91,17 @@
                 channel: "dylp123",
                 layout: "video",
                 muted: true
+            }).addEventListener(Twitch.Embed.VIDEO_PLAY, function() {
+                autoSort('dylan-twitch')
             });
-
             new Twitch.Embed("chirag-twitch", {
                 width: '100%',
                 height: height,
                 channel: "chig32",
                 layout: "video",
                 muted: true
+            }).addEventListener(Twitch.Embed.VIDEO_PLAY, function() {
+                autoSort('chirag-twitch')
             });
             new Twitch.Embed("nick-twitch", {
                 width: '100%',
@@ -93,6 +109,8 @@
                 channel: "nicknguyen24",
                 layout: "video",
                 muted: true
+            }).addEventListener(Twitch.Embed.VIDEO_PLAY, function() {
+                autoSort('nick-twitch')
             });
             new Twitch.Embed("sid-twitch", {
                 width: '100%',
@@ -100,6 +118,8 @@
                 channel: "siddyk86",
                 layout: "video",
                 muted: true
+            }).addEventListener(Twitch.Embed.VIDEO_PLAY, function() {
+                autoSort('sid-twitch')
             });
             new Twitch.Embed("ajay-twitch", {
                 width: '100%',
@@ -107,6 +127,8 @@
                 channel: "hoostrash69",
                 layout: "video",
                 muted: true
+            }).addEventListener(Twitch.Embed.VIDEO_PLAY, function() {
+                autoSort('ajay-twitch')
             });
             new Twitch.Embed("eric-twitch", {
                 width: '100%',
@@ -114,6 +136,8 @@
                 channel: "hoorules69",
                 layout: "video",
                 muted: true
+            }).addEventListener(Twitch.Embed.VIDEO_PLAY, function() {
+                autoSort('eric-twitch')
             });
         }
         embedTwitch(360);
