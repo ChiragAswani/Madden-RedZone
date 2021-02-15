@@ -66,16 +66,18 @@
             $( "#sortable" ).sortable();
         } );
         function autoSort(name) {
-            if (moved[name]) return true
-            const items = document.getElementsByClassName('twitch-container')
-            for (let i in items) {
-                if (items[i] && items[i].innerHTML && items[i].innerHTML.includes(name)) {
-                    const parent = items[i].parentNode;
-                    const detatchedItem = parent.removeChild(items[i]);
-                    parent.insertBefore(detatchedItem, items[0]);
-                    moved[name] = true
+            try {
+                if (moved[name]) return true
+                const items = document.getElementsByClassName('twitch-container')
+                for (let i in items) {
+                    if (items[i] && items[i].innerHTML && items[i].innerHTML.includes(name)) {
+                        const parent = items[i].parentNode;
+                        const detatchedItem = parent.removeChild(items[i]);
+                        parent.insertBefore(detatchedItem, items[0]);
+                        moved[name] = true
+                    }
                 }
-            }
+            } catch (e) {return true}
         }
         function embedTwitch(height) {
             new Twitch.Embed("arjun-twitch", {
