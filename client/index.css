@@ -76,3 +76,10 @@ select:focus {
         width: 100%;
     }
 }
+
+.view-schedule {
+    font-family: 'Trebuchet MS', sans-serif;
+    color: white;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
