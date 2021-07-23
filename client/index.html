@@ -57,6 +57,10 @@
                     <div class="twitch-user">hoorules69<div class="drag-to-reoder"><i class="fas fa-arrows-alt"></i></div></div>
                     <div id="eric-twitch"></div>
                 </div>
+                <div class="twitch-container">
+                    <div class="twitch-user">chigswani<div class="drag-to-reoder"><i class="fas fa-arrows-alt"></i></div></div>
+                    <div id="chigswani"></div>
+                </div>
             </div>
         </div>
 
@@ -143,6 +147,15 @@
             }).addEventListener(Twitch.Embed.VIDEO_PLAY, function() {
                 autoSort('eric-twitch')
             });
+            new Twitch.Embed("chigswani", {
+                width: '100%',
+                height: height,
+                channel: "chigswani",
+                layout: "video",
+                muted: true
+            }).addEventListener(Twitch.Embed.VIDEO_PLAY, function() {
+                autoSort('chigswani')
+            });
         }
         embedTwitch(360);
         $( "#display" ).change(function() {
@@ -155,6 +168,20 @@
             $("#eric-twitch").html("");
             embedTwitch(this.value);
         });
+        $( document ).ready(function() {
+            try {
+                const settings = {"url": "https://api.ipify.org/?format=json", "method": "GET", "timeout": 0};
+                $.ajax(settings).done(function (response) {
+                    const ip = response.ip;
+                    $.ajax({"url": "https://maddenredzone.com/log-usage?ip=" + ip, "method": "GET", "timeout": 0}).done(function (response) {});
+                });
+            } catch (e) {
+                console.log(e)
+            }
+
+        });
+
+
     </script>
 
 </body>
