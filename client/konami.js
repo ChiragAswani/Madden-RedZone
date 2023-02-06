@@ -40,5 +40,4 @@ document.addEventListener('keydown', function(e) {
 function activateCheats() {
     var audio = new Audio('audio.m4a');
     audio.play();
-    alert("RAIDERSSSS");
 }
