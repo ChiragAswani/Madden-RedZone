@@ -10,9 +10,6 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname + '/client'))
 
 app.get('/', (req, res) => {return res.sendFile(path.join(__dirname, "../client", "index.html"));});
-app.get("/immortals",function(req, res){
-    res.sendFile(path.join(__dirname + "/client/immortals.html"));
-});
 
 app.get("/log-usage",function(req, res){
     const text = (`Timestamp: ${new Date().getTime()} | IP: ${req.query.ip}`);
